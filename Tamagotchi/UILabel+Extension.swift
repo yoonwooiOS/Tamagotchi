@@ -14,6 +14,9 @@ extension UILabel {
         self.font = .boldSystemFont(ofSize: font)
         self.textColor = UIColor.basicColor
         self.textAlignment = .center
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = CGColor.basicColor
+        self.layer.cornerRadius = 4
     }
     
 }

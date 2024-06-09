@@ -34,8 +34,8 @@ class SelectFirstViewController: UIViewController {
         
         view.addSubview(collectionView)
         
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+        collectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
             
         }
         
@@ -56,20 +56,27 @@ extension SelectFirstViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
         
         let data =  tamagotchiList[indexPath.row]
         cell.setupCell(name: data.name, imageName: data.image)
         return cell
     }
-}
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data =  tamagotchiList[indexPath.row]
+        let alertVc = AlertViewController(data:data)
+        
+        present(alertVc, animated: true)
+    }
+}
 extension SelectFirstViewController: UICollectionViewDelegateFlowLayout {
     
     // 한 cell당 크기
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: UIScreen.main.bounds.width / 3 - 10 , height: 136)
+        return CGSize(width: UIScreen.main.bounds.width / 3 - 10 , height: 140)
     }
     
     // cell 위 아래 간격

@@ -15,11 +15,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
+       
+        // Tamagotchi savedData를 Userdefaults에 저장후 분기처리
+        let isSavedData = UserDefaults.standard.bool(forKey: "signUp")
+        Tamagotchi.savedName = UserDefaults.standard.string(forKey: "TamagotchiName")
+        Tamagotchi.savedImage = UserDefaults.standard.string(forKey: "TamagotchiImage")
         
-        let vc = SelectFirstViewController()
-        let nvc = UINavigationController(rootViewController: vc)
-        window?.rootViewController = nvc // sb entryPoint
+//        Tamagotchi.savedData = false
+        print(Tamagotchi.savedData)
+//        print(isSavedData)
+        switch isSavedData {
+        case true:
+            let vc = MainViewController()
+            let nvc = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nvc // sb entryPoint
+            
+        case false:
+            let vc = SelectFirstViewController()
+            let nvc = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nvc // sb entryPoint
+        }
         window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

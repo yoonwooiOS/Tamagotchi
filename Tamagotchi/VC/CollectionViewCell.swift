@@ -11,7 +11,7 @@ import SnapKit
 class CollectionViewCell: UICollectionViewCell {
     static let identifier = "CollectionViewCell"
     
-    let nameLabel: UILabel = {
+    var nameLabel: UILabel = {
         var name = UILabel()
         name.primaryUILabel(font: 12)
         name.layer.borderWidth = 0.5
@@ -20,7 +20,8 @@ class CollectionViewCell: UICollectionViewCell {
         return name
         
     }()
-    let characterImageView: UIImageView = {
+    
+    var characterImageView: UIImageView = {
         
         var imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -51,25 +52,24 @@ class CollectionViewCell: UICollectionViewCell {
     func setupLayout() {
         
         
-        characterImageView.snp.makeConstraints { make in
-            make.top.equalTo(contentView).offset(12)
+        characterImageView.snp.makeConstraints {
+            $0.top.equalTo(contentView).offset(12)
            
-            make.centerX.equalTo(contentView)
-            make.size.equalTo(88)
+            $0.centerX.equalTo(contentView)
+            $0.size.equalTo(88)
         }
         
-        nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(characterImageView.snp.bottom).offset(8)
-            make.centerX.equalTo(contentView.safeAreaLayoutGuide)
-            make.width.equalTo(100)
-            make.height.equalTo(24)
+        nameLabel.snp.makeConstraints {
+            $0.top.equalTo(characterImageView.snp.bottom).offset(8)
+            $0.centerX.equalTo(contentView.safeAreaLayoutGuide)
+            $0.width.equalTo(100)
+            $0.height.equalTo(24)
             }
             
     }
     
     func setupCell(name: String, imageName: String) {
         
-       
         nameLabel.text = name
         characterImageView.image = UIImage(named: imageName)
         

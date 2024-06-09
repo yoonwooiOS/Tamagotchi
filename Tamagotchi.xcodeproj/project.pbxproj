@@ -20,6 +20,8 @@
 		99245EF32C1322F70023A63E /* SelectFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EF22C1322F70023A63E /* SelectFirstViewController.swift */; };
 		99245EF52C1324AC0023A63E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EF42C1324AC0023A63E /* CollectionViewCell.swift */; };
 		99245EFD2C1482290023A63E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 99245EFC2C1482290023A63E /* SnapKit */; };
+		99245F032C1544A40023A63E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245F022C1544A40023A63E /* AlertViewController.swift */; };
+		99245F052C156C200023A63E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245F042C156C200023A63E /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		99245EEF2C1312650023A63E /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		99245EF22C1322F70023A63E /* SelectFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFirstViewController.swift; sourceTree = "<group>"; };
 		99245EF42C1324AC0023A63E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		99245F022C1544A40023A63E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		99245F042C156C200023A63E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				99245EF22C1322F70023A63E /* SelectFirstViewController.swift */,
 				99245EF42C1324AC0023A63E /* CollectionViewCell.swift */,
+				99245F022C1544A40023A63E /* AlertViewController.swift */,
+				99245F042C156C200023A63E /* MainViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				99245ED52C12E4AC0023A63E /* ViewController.swift in Sources */,
+				99245F052C156C200023A63E /* MainViewController.swift in Sources */,
 				99245EF32C1322F70023A63E /* SelectFirstViewController.swift in Sources */,
 				99245EF52C1324AC0023A63E /* CollectionViewCell.swift in Sources */,
+				99245F032C1544A40023A63E /* AlertViewController.swift in Sources */,
 				99245ED12C12E4AC0023A63E /* AppDelegate.swift in Sources */,
 				99245EEA2C12E9890023A63E /* UILabel+Extension.swift in Sources */,
 				99245EF02C1312650023A63E /* Tamagotchi.swift in Sources */,
