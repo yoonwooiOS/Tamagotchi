@@ -13,6 +13,13 @@
 		99245EDA2C12E4AE0023A63E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99245ED92C12E4AE0023A63E /* Assets.xcassets */; };
 		99245EDD2C12E4AE0023A63E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 99245EDC2C12E4AE0023A63E /* Base */; };
 		99245EE52C12E57B0023A63E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 99245EE42C12E57B0023A63E /* .gitignore */; };
+		99245EE82C12E7270023A63E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EE72C12E7270023A63E /* UIView+Extension.swift */; };
+		99245EEA2C12E9890023A63E /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EE92C12E9890023A63E /* UILabel+Extension.swift */; };
+		99245EEC2C12EA380023A63E /* Primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EEB2C12EA380023A63E /* Primary.swift */; };
+		99245EF02C1312650023A63E /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EEF2C1312650023A63E /* Tamagotchi.swift */; };
+		99245EF32C1322F70023A63E /* SelectFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EF22C1322F70023A63E /* SelectFirstViewController.swift */; };
+		99245EF52C1324AC0023A63E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99245EF42C1324AC0023A63E /* CollectionViewCell.swift */; };
+		99245EFD2C1482290023A63E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 99245EFC2C1482290023A63E /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		99245EDC2C12E4AE0023A63E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99245EDE2C12E4AE0023A63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99245EE42C12E57B0023A63E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		99245EE72C12E7270023A63E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		99245EE92C12E9890023A63E /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		99245EEB2C12EA380023A63E /* Primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primary.swift; sourceTree = "<group>"; };
+		99245EEF2C1312650023A63E /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		99245EF22C1322F70023A63E /* SelectFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFirstViewController.swift; sourceTree = "<group>"; };
+		99245EF42C1324AC0023A63E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99245EFD2C1482290023A63E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +71,36 @@
 		99245ECF2C12E4AC0023A63E /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				99245EF12C1322C90023A63E /* VC */,
+				99245EEE2C1312450023A63E /* Model */,
 				99245ED02C12E4AC0023A63E /* AppDelegate.swift */,
 				99245ED22C12E4AC0023A63E /* SceneDelegate.swift */,
 				99245ED42C12E4AC0023A63E /* ViewController.swift */,
 				99245ED92C12E4AE0023A63E /* Assets.xcassets */,
 				99245EDB2C12E4AE0023A63E /* LaunchScreen.storyboard */,
 				99245EDE2C12E4AE0023A63E /* Info.plist */,
+				99245EE72C12E7270023A63E /* UIView+Extension.swift */,
+				99245EE92C12E9890023A63E /* UILabel+Extension.swift */,
+				99245EEB2C12EA380023A63E /* Primary.swift */,
 			);
 			path = Tamagotchi;
+			sourceTree = "<group>";
+		};
+		99245EEE2C1312450023A63E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99245EEF2C1312650023A63E /* Tamagotchi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		99245EF12C1322C90023A63E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				99245EF22C1322F70023A63E /* SelectFirstViewController.swift */,
+				99245EF42C1324AC0023A63E /* CollectionViewCell.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +119,9 @@
 			dependencies = (
 			);
 			name = Tamagotchi;
+			packageProductDependencies = (
+				99245EFC2C1482290023A63E /* SnapKit */,
+			);
 			productName = Tamagotchi;
 			productReference = 99245ECD2C12E4AC0023A63E /* Tamagotchi.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 99245EC42C12E4AC0023A63E;
+			packageReferences = (
+				99245EFB2C1482290023A63E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 99245ECE2C12E4AC0023A63E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				99245ED52C12E4AC0023A63E /* ViewController.swift in Sources */,
+				99245EF32C1322F70023A63E /* SelectFirstViewController.swift in Sources */,
+				99245EF52C1324AC0023A63E /* CollectionViewCell.swift in Sources */,
 				99245ED12C12E4AC0023A63E /* AppDelegate.swift in Sources */,
+				99245EEA2C12E9890023A63E /* UILabel+Extension.swift in Sources */,
+				99245EF02C1312650023A63E /* Tamagotchi.swift in Sources */,
 				99245ED32C12E4AC0023A63E /* SceneDelegate.swift in Sources */,
+				99245EEC2C12EA380023A63E /* Primary.swift in Sources */,
+				99245EE82C12E7270023A63E /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99245EFB2C1482290023A63E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99245EFC2C1482290023A63E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99245EFB2C1482290023A63E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99245EC52C12E4AC0023A63E /* Project object */;
 }
